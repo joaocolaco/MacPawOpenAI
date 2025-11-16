@@ -4868,6 +4868,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/ReasoningEffort`.
         @frozen public enum ReasoningEffort: String, Codable, Hashable, Sendable, CaseIterable {
+            case none = "none"
             case minimal = "minimal"
             case low = "low"
             case medium = "medium"
