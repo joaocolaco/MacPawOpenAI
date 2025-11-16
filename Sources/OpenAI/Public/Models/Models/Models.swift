@@ -55,8 +55,8 @@ public extension Model {
 
     // GPT-5
 
-    /// `gpt-5` OpenAI's best AI system with significant leap in intelligence, designed for logic and multi-step tasks with deep reasoning
-    static let gpt5 = "gpt-5"
+    /// `gpt-5.1` Complex reasoning, broad world knowledge, and code-heavy or multi-step agentic tasks
+    static let gpt5_1 = "gpt-5.1"
 
     /// `gpt-5-mini` Lightweight GPT-5 version for cost-sensitive applications
     static let gpt5_mini = "gpt-5-mini"
@@ -66,6 +66,9 @@ public extension Model {
 
     /// `gpt-5-chat` Built for advanced, natural, multimodal conversations
     static let gpt5_chat = "gpt-5-chat"
+
+    /// `gpt-5` Previous flagship model, replaced by gpt-5.1
+    static let gpt5 = "gpt-5"
 
     // GPT-4.1
 
