@@ -922,6 +922,15 @@ public struct ChatQuery: Equatable, Codable, Streamable, Sendable {
     }
     
     public enum ReasoningEffort: Codable, Equatable, Sendable {
+        /**
+        - Warning: 
+        Not supported by `gpt-5`
+        */
+        case none
+        /**
+        - Warning: 
+        Not supported by `gpt-5.1`
+        */
         case minimal
         case low
         case medium
@@ -935,6 +944,8 @@ public struct ChatQuery: Equatable, Codable, Streamable, Sendable {
         public func encode(to encoder: any Encoder) throws {
             var container = encoder.singleValueContainer()
             switch self {
+            case .none:
+                try container.encode("none")
             case .minimal:
                 try container.encode("minimal")
             case .low:
@@ -952,6 +963,8 @@ public struct ChatQuery: Equatable, Codable, Streamable, Sendable {
             let container = try decoder.singleValueContainer()
             let rawValue = try container.decode(String.self)
             switch rawValue {
+            case "none":
+                self = .none
             case "minimal":
                 self = .minimal
             case "low":
